@@ -1,3 +1,9 @@
+[workspace]
+members = ["core", "macros"]
+
+[workspace.package]
+rust-version = "1.67.1"
+
 [package]
 name = "deluxe"
 version = "0.5.0"
@@ -11,6 +17,7 @@ readme = "README.md"
 keywords = ["macros", "derive", "attributes"]
 include = ["/src", "/tests", "/README.md", "/COPYING"]
 resolver = "2"
+rust-version.workspace = true
 
 [features]
 default = ["full", "proc-macro"]
@@ -27,6 +34,3 @@ deluxe-macros = { path = "./macros", version = "0.5.0" }
 [dev-dependencies]
 quote = "1.0.25"
 deluxe-core = { path = "./core", version = "0.5.0", features = ["full"], default-features = false }
-
-[workspace]
-members = ["core", "macros"]
