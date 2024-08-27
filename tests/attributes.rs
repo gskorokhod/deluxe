@@ -21,7 +21,6 @@ struct SingleAttributeNamed {
 struct MultiAttributes(char);
 
 #[test]
-#[ignore]
 fn multi_attributes() {
     use ::deluxe::HasAttributes;
 
@@ -102,7 +101,7 @@ fn multi_attributes() {
     let expr = ::syn::parse2(q! { #[multi2('c')] #[multi2('d')] true }).unwrap();
     ::std::assert_eq!(
         ::deluxe::parse_attributes::<::syn::Expr, MultiAttributes>(&expr).unwrap_err_string(),
-        "unexpected token"
+        "unexpected token, expected `)`"
     );
 }
 
