@@ -1343,6 +1343,7 @@ impl_parse_meta_item_syn!(syn::ExprArray, #full);
 impl_parse_meta_paren_item_syn!(syn::ExprAssign, #full);
 impl_parse_meta_item_syn!(syn::ExprCall, #full);
 impl_parse_meta_item_syn!(syn::ExprCast, #full);
+impl_parse_meta_item_syn!(syn::ExprClosure, #full);
 impl_parse_meta_item_syn!(syn::ExprField, #full);
 impl_parse_meta_item_syn!(syn::ExprIndex, #full);
 impl_parse_meta_item_syn!(syn::ExprLit, #full);
